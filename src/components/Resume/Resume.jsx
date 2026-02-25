@@ -2,9 +2,6 @@ import { FaDownload, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import './Resume.css';
 
 function Resume() {
-    /* =============================================
-       EDIT YOUR EXPERIENCE HERE
-       ============================================= */
     const experience = [
         {
             title: 'Member',
