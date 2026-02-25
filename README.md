@@ -4,7 +4,7 @@ My personal portfolio website built with **React** and **Vite**.
 
 ## 🔗 Live Demo
 
-Check it out here: [https://harihara-portfolio.vercel.app](https://harihara-portfolio.vercel.app)
+Check it out here: [https://www.manidweepa.site](https://www.manidweepa.site)
 
 ## 🛠️ Tech Stack
 
