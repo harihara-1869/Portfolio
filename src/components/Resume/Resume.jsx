@@ -11,9 +11,9 @@ function Resume() {
         },
         {
             title: 'Member',
-            company: 'Project Jatayu',
-            period: '2024 - Present',
-            description: 'I am a member of Project Jatayu, a student drone club at R.V. College of Engineering.',
+            company: 'Accerlate Club',
+            period: '2025 - Present',
+            description: 'I am a member of Accerlate Club, a student coding club at R.V. College of Engineering.',
         },
     ];
 
