@@ -27,6 +27,14 @@ function Projects() {
             github: 'https://github.com/harihara-1869/Team_Chimera_Firmware',
             demo: '',
         },
+        {
+            title: 'Car Charge Monitor',
+            description: 'A car charge monitor using Enphase API to conitneously monitor car charging and trigger a notification and email alert.',
+            image: '/car_charge_pic.png',
+            tags: ['Python', 'Enphase API', 'Gmail API'],
+            github: 'https://github.com/harihara-1869/Car_Charger_Monitor',
+            demo: '',
+        },
     ];
 
     return (
