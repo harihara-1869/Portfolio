@@ -9,7 +9,15 @@ function Projects() {
             image: '/talkio_pic.png',
             tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT', 'Express', 'Tailwind CSS'],
             github: 'https://github.com/harihara-1869/Chat-App',
-            demo: 'https://chat.manidweepa.site',
+            demo: '',
+        },
+        {
+            title: 'AI-Based Early Detection of Data Leaks',
+            description: 'Built in collaboration with THWS, this team project is an AI-powered dark web monitoring tool that uses Tor to scrape .onion sources, extract IOCs, classify threats, and generate intelligence summaries.',
+            image: '/thws_aiDark.png',
+            tags: ['Tor', 'AsyncIO', 'Python', 'Cyber Security', 'AI', 'Leak Intelligence'],
+            github: 'https://github.com/pramath6095/dark_web_leak_ai',
+            demo: '',
         },
         {
             title: 'Food Compliance Checker',
