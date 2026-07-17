@@ -12,6 +12,22 @@ function Projects() {
             demo: '',
         },
         {
+            title: 'Kinetic Industrial - Motor Control Dashboard',
+            description: 'A real-time industrial IoT dashboard for intelligent motor monitoring and control, featuring live telemetry visualization, device management, predictive health diagnostics, remote terminal access, and seamless device provisioning through Azure IoT Hub.',
+            image: '/iot_dashboard.png',
+            tags: ['Next.js 16', 'React 19', 'Supabase DB', 'Supabase Auth', 'Azure IoT Hub', 'Vitest', 'Tailwind CSS'],
+            github: 'https://github.com/harihara-1869/iot-dashboard',
+            demo: 'https://iot-dashboard-alpha-smoky.vercel.app',
+        },
+        {
+            title: 'NILM Motor Load Classifier',
+            description: 'Implemented a pre-trained Random Forest classifier on an ESP32 for predictive maintenance of NEMA 17 stepper motors. The firmware performs real-time motor state classification and securely publishes predictions to Azure IoT Hub over MQTT/TLS.',
+            image: '/nilm_model.png',
+            tags: ['Python', 'C', 'Azure IoT Hub', 'ESP IDF'],
+            github: 'https://github.com/Nithin-eashwar/IotEl-ML-pipeline',
+            demo: '',
+        },
+        {
             title: 'AI-Based Early Detection of Data Leaks',
             description: 'Built in collaboration with THWS, this team project is an AI-powered dark web monitoring tool that uses Tor to scrape .onion sources, extract IOCs, classify threats, and generate intelligence summaries.',
             image: '/thws_aiDark.png',

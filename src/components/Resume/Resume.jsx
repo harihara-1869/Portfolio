@@ -36,6 +36,7 @@ function Resume() {
         { name: 'JavaScript / TypeScript', level: 90 },
         { name: 'Node.js / Express', level: 80 },
         { name: 'Python', level: 75 },
+        { name: 'C/C++', level: 75},
         { name: 'Git / DevOps', level: 75 },
         { name: 'React', level: 70 },
         { name: 'MongoDB / PostgreSQL', level: 70 },
