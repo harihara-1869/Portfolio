@@ -25,3 +25,6 @@ dist-ssr
 
 # Personal Notes
 notes.txt
+
+#Coding tools
+.commandcode/
