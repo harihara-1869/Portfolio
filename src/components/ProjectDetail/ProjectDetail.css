@@ -1,0 +1,327 @@
+.project-detail-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.pd-hero {
+    padding-top: calc(var(--navbar-height) + 40px);
+    padding-bottom: 60px;
+}
+
+.pd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    transition: all var(--transition-fast);
+}
+
+.pd-back:hover {
+    color: var(--accent-pink);
+    transform: translateX(-4px);
+}
+
+.pd-hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.pd-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pd-hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.pd-oneliner {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.pd-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pd-hero-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.pd-hero-image {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(199, 112, 240, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.pd-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ============================================
+   SHARED SECTION
+   ============================================ */
+.pd-section {
+    padding: 48px 0;
+}
+
+.pd-section + .pd-section {
+    border-top: 1px solid rgba(199, 112, 240, 0.08);
+}
+
+.pd-narrow {
+    max-width: 900px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.pd-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+
+.pd-heading::after {
+    display: none;
+}
+
+/* paragraphs inside sections */
+.pd-section p,
+.pd-build p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.pd-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   BUILD STORY — inline images & code
+   ============================================ */
+.pd-build {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.build-image {
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(199, 112, 240, 0.1);
+}
+
+.build-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.build-image figcaption {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.build-code {
+    margin: 20px 0;
+    padding: 20px 24px;
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid rgba(199, 112, 240, 0.1);
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   HIGHLIGHTS — callout cards
+   ============================================ */
+.pd-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.pd-callout {
+    padding: 28px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.pd-callout h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.pd-callout p {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   WHAT I'D DO DIFFERENTLY
+   ============================================ */
+.pd-differently {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pd-differently li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.pd-differently li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+/* ============================================
+   PREV / NEXT NAV
+   ============================================ */
+.pd-nav {
+    margin-top: auto;
+    padding: 40px 0;
+    border-top: 1px solid rgba(199, 112, 240, 0.1);
+}
+
+.pd-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pd-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 24px;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(199, 112, 240, 0.1);
+    border-radius: 12px;
+    transition: all var(--transition-normal);
+}
+
+.pd-nav-link:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.pd-nav-next {
+    text-align: right;
+}
+
+.pd-nav-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pd-nav-next .pd-nav-label {
+    justify-content: flex-end;
+}
+
+.pd-nav-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   NOT FOUND
+   ============================================ */
+.project-not-found {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px;
+    gap: 20px;
+}
+
+.project-not-found h2 {
+    font-size: 2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .pd-hero {
+        padding-top: calc(var(--navbar-height) + 20px);
+        padding-bottom: 40px;
+    }
+
+    .pd-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pd-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pd-nav-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    .pd-narrow {
+        max-width: 1000px;
+    }
+
+    .pd-highlights-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}

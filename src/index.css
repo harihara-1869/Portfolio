@@ -25,6 +25,7 @@
   /* Sizing */
   --navbar-height: 70px;
   --section-padding: 100px;
+  --container-max: 1200px;
   
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -102,7 +103,7 @@ p {
    UTILITY CLASSES
    ============================================ */
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -260,5 +261,17 @@ p {
   
   .section-title {
     margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --container-max: 1400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --container-max: 1600px;
   }
 }

@@ -21,6 +21,8 @@
     flex-direction: column;
     overflow: hidden;
     padding: 0;
+    cursor: pointer;
+    color: inherit;
 }
 
 .project-image {

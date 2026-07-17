@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { AiOutlineHome, AiOutlineUser, AiOutlineFundProjectionScreen, AiOutlineFile } from 'react-icons/ai';
+import { useLocation, Link } from 'react-router-dom';
+import { AiOutlineUser, AiOutlineFundProjectionScreen, AiOutlineFile } from 'react-icons/ai';
 import { CgGitFork } from 'react-icons/cg';
 import { FaStar } from 'react-icons/fa';
 import './Navbar.css';
@@ -7,6 +8,8 @@ import './Navbar.css';
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+    const isHome = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,15 +28,17 @@ function Navbar() {
         setIsMenuOpen(false);
     };
 
+    const navHref = (section) => isHome ? `#${section}` : `/#${section}`;
+
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 {/* =============================================
             EDIT YOUR NAME/LOGO HERE
             ============================================= */}
-                <a href="#home" className="navbar-logo">
+                <Link to="/" className="navbar-logo">
                     harihara-1869.dev
-                </a>
+                </Link>
 
                 <button className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
                     <span></span>
@@ -43,22 +48,17 @@ function Navbar() {
 
                 <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-link" onClick={closeMenu}>
-                            <AiOutlineHome /> Home
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#about" className="nav-link" onClick={closeMenu}>
+                        <a href={navHref('about')} className="nav-link" onClick={closeMenu}>
                             <AiOutlineUser /> About
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="#projects" className="nav-link" onClick={closeMenu}>
+                        <a href={navHref('projects')} className="nav-link" onClick={closeMenu}>
                             <AiOutlineFundProjectionScreen /> Projects
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="#resume" className="nav-link" onClick={closeMenu}>
+                        <a href={navHref('resume')} className="nav-link" onClick={closeMenu}>
                             <AiOutlineFile /> Resume
                         </a>
                     </li>

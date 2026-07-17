@@ -1,49 +1,12 @@
+import { Link } from 'react-router-dom';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import projects from '../../data/projects';
 import './Projects.css';
 
 function Projects() {
-    const projects = [
-        {
-            title: 'Talkio - The Chat App',
-            description: 'A simple chat application, secured with JWT tokens and real time functionallity using Socket.io. Completly hosted on my own server setup by me.',
-            image: '/talkio_pic.png',
-            tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT', 'Express', 'Tailwind CSS'],
-            github: 'https://github.com/harihara-1869/Chat-App',
-            demo: '',
-        },
-        {
-            title: 'AI-Based Early Detection of Data Leaks',
-            description: 'Built in collaboration with THWS, this team project is an AI-powered dark web monitoring tool that uses Tor to scrape .onion sources, extract IOCs, classify threats, and generate intelligence summaries.',
-            image: '/thws_aiDark.png',
-            tags: ['Tor', 'AsyncIO', 'Python', 'Cyber Security', 'AI', 'Leak Intelligence'],
-            github: 'https://github.com/pramath6095/dark_web_leak_ai',
-            demo: '',
-        },
-        {
-            title: 'Food Compliance Checker',
-            description: 'A food compliance checker using openfoodfacts.org database for compliance check. Supports camera as well as name based search. Made for my biosafety project.',
-            image: '/food_pic.png',
-            tags: ['Node.js', 'Express.js', 'OpenFoodFacts API', 'React.js'],
-            github: 'https://github.com/harihara-1869/Biosafety_EL',
-            demo: '',
-        },
-        {
-            title: 'BMS Algorithm Development',
-            description: 'Developing firmware for Electric Vehicle systems including Battery Management System and Driver Assistance System for Team Chimera.',
-            image: '/bms_pic.png',
-            tags: ['C', 'Matlab', 'Simulink'],
-            github: 'https://github.com/harihara-1869/Team_Chimera_Firmware',
-            demo: '',
-        },
-        {
-            title: 'Car Charge Monitor',
-            description: 'A car charge monitor using Enphase API to conitneously monitor car charging and trigger a notification and email alert.',
-            image: '/car_charge_pic.png',
-            tags: ['Python', 'Enphase API', 'Gmail API'],
-            github: 'https://github.com/harihara-1869/Car_Charger_Monitor',
-            demo: '',
-        },
-    ];
+    const handleLinkClick = (e) => {
+        e.stopPropagation();
+    };
 
     return (
         <section id="projects" className="projects-section">
@@ -54,10 +17,13 @@ function Projects() {
                 </div>
 
                 <div className="projects-grid">
-                    {projects.map((project, index) => (
-                        <div key={index} className="project-card card">
+                    {projects.map((project) => (
+                        <Link
+                            key={project.id}
+                            to={`/projects/${project.slug}`}
+                            className="project-card card"
+                        >
                             <div className="project-image">
-                                {/* Replace emoji with actual image */}
                                 <img src={project.image} alt={project.title} />
                             </div>
 
@@ -71,7 +37,7 @@ function Projects() {
                                     ))}
                                 </div>
 
-                                <div className="project-links">
+                                <div className="project-links" onClick={handleLinkClick}>
                                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
                                         <FaGithub /> GitHub
                                     </a>
@@ -82,7 +48,7 @@ function Projects() {
                                     )}
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
