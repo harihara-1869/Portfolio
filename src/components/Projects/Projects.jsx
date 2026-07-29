@@ -9,6 +9,14 @@ function Projects() {
             image: '/talkio_pic.png',
             tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT', 'Express', 'Tailwind CSS'],
             github: 'https://github.com/harihara-1869/Chat-App',
+            demo: 'https://chat.manidweepa.site',
+        },
+        {
+            title: 'Secure NFC Smart Lock Firmware for ESP32-S3',
+            description: 'Built a modular firmware stack for an ESP32-S3 NFC smart lock using a PN532 controller, enabling secure phone-to-lock authentication over NFC. Designed and implemented a custom mutual authentication protocol using X25519, Ed25519, HKDF-SHA256, and AES-256-GCM, as no open-source mutual authentication protocol implementation exists for ESP32-based NFC smart locks.',
+            image: '/smartlock_firmware.png',
+            tags: ['ESP IDF', 'PN532', 'NFC', 'I2C', 'FreeRTOS', 'mbedTLS', 'Monocypher', 'Cryptography', 'Embedded Systems'],
+            github: 'https://github.com/harihara-1869/smart_lock_firmware',
             demo: '',
         },
         {
