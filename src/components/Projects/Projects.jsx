@@ -4,76 +4,44 @@ import './Projects.css';
 function Projects() {
     const projects = [
         {
-            title: 'Talkio - The Chat App',
-            description: 'A simple chat application, secured with JWT tokens and real time functionallity using Socket.io. Completly hosted on my own server setup by me.',
-            image: '/talkio_pic.png',
-            tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT', 'Express', 'Tailwind CSS'],
-            github: 'https://github.com/harihara-1869/Chat-App',
-            demo: 'https://chat.manidweepa.site',
+            title: 'Leision Lens - AI Retinopathy Screening',
+            description: 'An AI-powered diabetic retinopathy screening platform built with EfficientNet-B4, featuring Grad-CAM explainability and lesion segmentation with an FPN. I contributed the Flask application integration and cross-dataset verification.',
+            image: '/leision_lens.svg',
+            tags: ['PyTorch', 'EfficientNet-B4', 'Flask', 'React', 'Grad-CAM', 'FPN'],
+            github: 'https://github.com/harihara-1869/leision_lens/',
+            demo: '',
         },
         {
-            title: 'Secure NFC Smart Lock Firmware for ESP32-S3',
-            description: 'Built a modular firmware stack for an ESP32-S3 NFC smart lock using a custom PN532 driver, enabling secure phone-to-lock authentication over NFC. Designed and implemented a custom mutual authentication protocol using X25519, Ed25519, HKDF-SHA256, and AES-256-GCM, as no open-source mutual authentication protocol implementation exists for ESP32-based NFC smart locks.',
+            title: 'Dark Web Leak Detection System',
+            description: 'An AI-powered dark web monitoring pipeline with asynchronous Tor-based crawling, LLM-driven threat classification, regex-based IOC extraction, and automated file analysis, surfaced through a Flask dashboard. Containerized with Docker, with rate-limit handling and concurrent task management.',
+            image: '/thws_aiDark.png',
+            tags: ['Python', 'Flask', 'asyncio', 'aiohttp', 'Tor', 'Docker', 'LLMs'],
+            github: 'https://github.com/harihara-1869/AIDarkLeak',
+            demo: '',
+        },
+        {
+            title: 'Secure NFC Smart Lock',
+            description: 'An end-to-end encrypted authentication system for an NFC smart lock, implementing mutual authentication and secure session establishment with Ed25519, X25519, AES-256, and HKDF, backed by an ESP-IDF firmware and Flutter client over ISO 14443-A / ISO-DEP.',
             image: '/smartlock_firmware.png',
-            tags: ['ESP IDF', 'Mutual Authentication', 'Ed25519', 'X25519', 'FreeRTOS', 'mbedTLS', 'Monocypher', 'Cryptography', 'Embedded Systems'],
+            tags: ['ESP-IDF', 'Flutter', 'Cryptography', 'ISO 14443-A', 'ISO-DEP', 'Ed25519', 'X25519', 'AES-256'],
             github: 'https://github.com/harihara-1869/smart_lock_firmware',
             demo: '',
         },
         {
-            title: 'PN532 NFC Driver for ESP-IDF',
-            description: 'Developed a modular ESP-IDF driver for the NXP PN532 NFC controller from the datasheet, implementing NFC target (card emulation) commands unavailable in existing ESP-IDF libraries. The driver features transport abstraction, robust frame parsing, ACK/NACK handling, IRQ and polling support, I2C bus recovery, and a high-level command API for ISO 14443 operations.',
-            image: '/pn532_driver.png',
-            tags: ['ESP IDF', 'PN532', 'NFC', 'I2C', 'Embedded Systems', 'ISO 14443'],
-            github: 'https://github.com/harihara-1869/pn532_driver',
+            title: 'EV Battery Management System Firmware',
+            description: 'Firmware for an APARD32690 (MAX32690 + ADBMS6830) based battery management system for a Formula EV, covering battery-monitoring communication, real-time embedded software, and vehicle CAN interfacing using FreeRTOS, isoSPI, ADC, and CAN 2.0A.',
+            image: '/bms_pic.png',
+            tags: ['C', 'FreeRTOS', 'isoSPI', 'ADC', 'CAN 2.0A', 'MAX32690', 'ADBMS6830'],
+            github: 'https://github.com/harihara-1869/Team_Chimera_Firmware',
             demo: '',
         },
         {
             title: 'Kinetic Industrial - Motor Control Dashboard',
             description: 'A real-time industrial IoT dashboard for intelligent motor monitoring and control, featuring live telemetry visualization, device management, predictive health diagnostics, remote terminal access, and seamless device provisioning through Azure IoT Hub.',
             image: '/iot_dashboard.png',
-            tags: ['Next.js 16', 'React 19', 'Supabase DB', 'Supabase Auth', 'Azure IoT Hub', 'Vitest', 'Tailwind CSS'],
+            tags: ['Next.js', 'React', 'Supabase', 'Azure IoT Hub', 'Tailwind CSS'],
             github: 'https://github.com/harihara-1869/iot-dashboard',
             demo: 'https://iot-dashboard-alpha-smoky.vercel.app',
-        },
-        {
-            title: 'NILM Motor Load Classifier',
-            description: 'Implemented a pre-trained Random Forest classifier on an ESP32 for predictive maintenance of NEMA 17 stepper motors. The firmware performs real-time motor state classification and securely publishes predictions to Azure IoT Hub over MQTT/TLS.',
-            image: '/nilm_model.png',
-            tags: ['Python', 'C', 'Azure IoT Hub', 'ESP IDF'],
-            github: 'https://github.com/Nithin-eashwar/IotEl-ML-pipeline',
-            demo: '',
-        },
-        {
-            title: 'AI-Based Early Detection of Data Leaks',
-            description: 'Built in collaboration with THWS, this team project is an AI-powered dark web monitoring tool that uses Tor to scrape .onion sources, extract IOCs, classify threats, and generate intelligence summaries.',
-            image: '/thws_aiDark.png',
-            tags: ['Tor', 'AsyncIO', 'Python', 'Cyber Security', 'AI', 'Leak Intelligence'],
-            github: 'https://github.com/pramath6095/dark_web_leak_ai',
-            demo: '',
-        },
-        {
-            title: 'Food Compliance Checker',
-            description: 'A food compliance checker using openfoodfacts.org database for compliance check. Supports camera as well as name based search. Made for my biosafety project.',
-            image: '/food_pic.png',
-            tags: ['Node.js', 'Express.js', 'OpenFoodFacts API', 'React.js'],
-            github: 'https://github.com/harihara-1869/Biosafety_EL',
-            demo: '',
-        },
-        {
-            title: 'BMS Algorithm Development',
-            description: 'Developing firmware for Electric Vehicle systems including Battery Management System and Driver Assistance System for Team Chimera.',
-            image: '/bms_pic.png',
-            tags: ['C', 'Matlab', 'Simulink'],
-            github: 'https://github.com/harihara-1869/Team_Chimera_Firmware',
-            demo: '',
-        },
-        {
-            title: 'Car Charge Monitor',
-            description: 'A car charge monitor using Enphase API to conitneously monitor car charging and trigger a notification and email alert.',
-            image: '/car_charge_pic.png',
-            tags: ['Python', 'Enphase API', 'Gmail API'],
-            github: 'https://github.com/harihara-1869/Car_Charger_Monitor',
-            demo: '',
         },
     ];
 
@@ -89,7 +57,6 @@ function Projects() {
                     {projects.map((project, index) => (
                         <div key={index} className="project-card card">
                             <div className="project-image">
-                                {/* Replace emoji with actual image */}
                                 <img src={project.image} alt={project.title} />
                             </div>
 
@@ -104,9 +71,11 @@ function Projects() {
                                 </div>
 
                                 <div className="project-links">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                                        <FaGithub /> GitHub
-                                    </a>
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                                            <FaGithub /> GitHub
+                                        </a>
+                                    )}
                                     {project.demo && (
                                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link demo">
                                             <FaExternalLinkAlt /> Demo

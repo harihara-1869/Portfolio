@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import './Home.css';
 
 function Home() {
@@ -10,8 +10,8 @@ function Home() {
         const typed = new Typed(typedRef.current, {
             strings: [
                 'Full Stack Developer',
-                'Student',
-                'Low Level Design Enthusiast'
+                'Embedded Systems Developer',
+                'CS Student'
             ],
             typeSpeed: 50,
             backSpeed: 30,

@@ -1,25 +1,22 @@
-import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit, DiCss3, DiHtml5, } from 'react-icons/di';
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiFirebase, SiExpress, SiFlutter,  SiDart,  SiEspressif,  SiQemu, SiCplusplus, SiC, } from 'react-icons/si';
+import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit } from 'react-icons/di';
+import { SiTailwindcss, SiExpress, SiFlutter, SiDart, SiEspressif, SiCplusplus, SiC } from 'react-icons/si';
 import './About.css';
 
 function About() {
     const techStack = [
+        { icon: <SiC />, name: 'C' },
+        { icon: <SiCplusplus />, name: 'C++' },
+        { icon: <SiEspressif />, name: 'ESP-IDF' },
+        { icon: <DiPython />, name: 'Python' },
+        { icon: <SiFlutter />, name: 'Flutter' },
+        { icon: <SiDart />, name: 'Dart' },
         { icon: <DiJavascript1 />, name: 'JavaScript' },
         { icon: <DiReact />, name: 'React' },
         { icon: <DiNodejs />, name: 'Node.js' },
+        { icon: <SiExpress />, name: 'Express' },
         { icon: <DiMongodb />, name: 'MongoDB' },
-        { icon: <DiPython />, name: 'Python' },
         { icon: <SiTailwindcss />, name: 'Tailwind' },
         { icon: <DiGit />, name: 'Git' },
-        { icon: <SiExpress />, name: 'Express' },
-        { icon: <DiCss3 />, name: 'CSS' },
-        { icon: <DiHtml5 />, name: 'HTML' },
-        { icon: <SiC />, name: "C" },
-        { icon: <SiCplusplus />, name: "C++" },
-        { icon: <SiFlutter />, name: "Flutter" },
-        { icon: <SiDart />, name: "Dart" },
-        { icon: <SiEspressif />, name: "ESP-IDF" },
-        { icon: <SiQemu />, name: "QEMU" },
     ];
 
     return (
@@ -35,10 +32,10 @@ function About() {
                             Hi Everyone, I am <span className="highlight">P R Hari Hara Sai Pratham</span> from <span className="highlight">Bengaluru, India</span>.
                         </p>
                         <p>
-                            I'm a <span className="highlight">2nd year Computer Science and Engineering</span> student at <span className="highlight">R.V. College of Engineering</span> who enjoys building software across the stack—from full-stack web applications to embedded systems.
+                            I'm a <span className="highlight">5th semester Computer Science and Engineering</span> student at <span className="highlight">R.V. College of Engineering</span> with a <span className="highlight">9.33 CGPA</span>, who enjoys building software across the stack—from full-stack web applications to embedded systems.
                         </p>
                         <p>
-                            Right now, I'm building an NFC-based mutual authentication system using <span className="highlight">ESP-IDF</span>, <span className="highlight">PN532</span>, and <span className="highlight">Flutter</span>. I'm particularly interested in systems programming, embedded development, cryptography, and writing efficient, reliable software.
+                            Right now, I'm building an end-to-end encrypted NFC smart lock, implementing mutual authentication and secure session establishment with <span className="highlight">Ed25519</span>, <span className="highlight">X25519</span>, and <span className="highlight">AES-256-GCM</span>, with an <span className="highlight">ESP-IDF</span> firmware and <span className="highlight">Flutter</span> client. I'm particularly interested in systems programming, embedded development, cryptography, and writing efficient, reliable software.
                         </p>
                         <p>
                             Apart from coding, some other activities that I love to do are:
